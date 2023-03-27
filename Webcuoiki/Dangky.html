@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Dangky.css" />
+    <link rel="shortcut icon" href="Images/Icon.png" type="image/png" />
+    <title>CTOON_Join</title>
+    <script>
+        function kiemtra(){
+            var hoten=window.document.Login.hoten.value;
+            var nlhoten=window.document.Login.nlhoten.value;
+            var mk=window.document.Login.mk.value;
+            var nlmk=window.document.Login.nlmk.value;
+            if(hoten.length==0){
+                alert('Vui lòng nhập vào tên tài khoản!!!');
+                window.document.Login.hoten.focus(); 
+                return false;
+            }
+            if(nlhoten.length==0){
+                alert('Vui lòng nhập lại tên tài khoản!!!!');
+                window.document.Login.nlhoten.focus(); 
+                return false;
+            }
+            if(hoten!=nlhoten){
+                alert('Tên tài khoản không trùng nhau!!!');
+                window.document.Login.hoten.focus();
+                window.document.Login.nlhoten.focus();
+                return false;
+            }
+            if(mk.length==0){
+                alert('Vui lòng nhập mật khẩu!!!');
+                window.document.Login.mk.focus();
+                return false;
+            }
+            if(mk.length<8){
+                alert('Mật khẩu phải chứa từ 8 kí tự trở lên!!!');
+                window.document.Login.mk.focus();
+                return false;
+            }
+            if(nlmk.length==0){
+                alert('Vui lòng nhập lại mật khẩu');
+                window.document.Login.nlmk.focus();
+                return false;
+            }
+            if(mk!=nlmk){
+                alert('Mật khẩu chưa giống!!!');
+                window.document.Login.mk.focus();
+                window.document.Login.nlmk.focus();
+                return false;
+            }
+            alert('Registered successfully!!!');
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="form">
+        <form name="Login" class="login-form" action="Dangnhap.html" onsubmit="return kiemtra();">
+            <input type="text" name="hoten" placeholder="Username" />
+            <input type="text" name="nlhoten" placeholder="Re-enter the account name" />
+            <input type="password" name="mk" placeholder="Pasword" />
+            <input type="password" name="nlmk" placeholder="Re-enter the pasword" />
+            <button type="submit">Create</button>
+        </form>
+    </div>
+</body>
+</html>

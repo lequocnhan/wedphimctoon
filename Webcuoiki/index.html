@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Trangchu.css" />
+    <link rel="shortcut icon" href="Images/Icon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -15px;
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            width: 30px;
+        }
+
+        .prev {
+            margin-left: -50px;
+            border-radius: 2px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 2px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #7289a83a;
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #0f1416fb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: rgba(75, 88, 101, 0.61);
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+    </style>
+    <title>CTOON</title>
+</head>
+
+<body>
+    <!-------------------------------------------------------------HEADER----------------------------------------------------------------->
+    <header>
+        <div id="LOGO">
+            <img src="Images/LOGO.png">
+        </div>
+        <a href="Trangchu.html">
+            <div id="XP"><small>XEM PHIM</small></div>
+        </a>
+        <div class="HEADALL">
+            <div class="ML"><small>NĂM PHÁT HÀNH</small><img src="Images/down-arrow.png"></div>
+            <table>
+                <tr>
+                    <td><img src="Images/triangle.png" /><a href="#">
+                            <div>Năm 2023</div>
+                        </a></td>
+                    <td><a href="#">Năm 2022</a></td>
+                    <td><a href="#">Năm 2021</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Năm 2020</a></td>
+                    <td><a href="#">Năm 2019</a></td>
+                    <td><a href="#">Năm 2018</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Năm 2017</a></td>
+                    <td><a href="#">Năm 2016</a></td>
+                    <td><a href="#">Năm 2015</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Năm 2014</a></td>
+                    <td><a href="#">Năm 2013</a></td>
+                    <td><a href="#">Năm 2012</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Năm 2011</a></td>
+                    <td><a href="#">Năm 2010</a></td>
+                    <td><a href="#">Năm 2009</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="HEADALL">
+            <div class="ML"><small>THỂ LOẠI</small><img src="Images/down-arrow.png"></div>
+            <table>
+                <tr>
+                    <td><img src="Images/triangle.png" /><a href="#">
+                            <div>Seinen</div>
+                        </a></td>
+                    <td><a href="#">Ác Quỷ</a></td>
+                    <td><a href="#">Âm Nhạc</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Anime</a></td>
+                    <td><a href="">Bạo Lực</a></td>
+                    <td><a href="#">Bí Ẩn</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Siêu Nhiên</a></td>
+                    <td><a href="#">Cars</a></td>
+                    <td><a href="#">Cartoon</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">CGDCT</a></td>
+                    <td><a href="#">Chiến Tranh</a></td>
+                    <td><a href="#">CN Animation</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Cổ Trang</a></td>
+                    <td><a href="#">Dementia</a></td>
+                    <td><a href="#">Dị Giới</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="HEADALL">
+            <div class="ML"><small>TOP ANIME</small><img src="Images/down-arrow.png"></div>
+            <table style="height: 50px;">
+                <tr>
+                    <td><img src="Images/triangle.png" /><a href="#">
+                            <div>Theo Ngày</div>
+                        </a></td>
+                    <td><a href="#">Theo Tháng</a></td>
+                    <td><a href="#">Theo Năm</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="HEADALL">
+            <div class="ML"><small>QUỐC GIA</small><img src="Images/down-arrow.png"></div>
+            <table>
+                <tr>
+                    <td><img src="Images/triangle.png" /><a href="#">
+                            <div>Ấn Độ</div>
+                        </a></td>
+                    <td><a href="#">Anh</a></td>
+                    <td><a href="#">Canada</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Châu Âu</a></td>
+                    <td><a href="#">Hàn Quốc</a></td>
+                    <td><a href="#">Mỹ</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Nga</a></td>
+                    <td><a href="#">Nhật Bản</a></td>
+                    <td><a href="#">Pháp</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Tây Ban Nha</a></td>
+                    <td><a href="#">Thái Lan</a></td>
+                    <td><a href="#">Trung Quốc</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Úc</a></td>
+                    <td><a href="#">Việt Nam</a></td>
+                    <td><a href="#">Ý</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="TIMKIEM">
+            <form id="FTK" action="">
+                <button type="submit" id="BTTK">
+                    <i id="ITK"><img src="Images/find.png"></i>
+                </button>
+                <input id="IPTK" type="text" placeholder="Nhập tên phim...">
+            </form>
+
+            <script>
+                const form = document.getElementById("FTK"); // lấy thẻ form
+                const input = document.getElementById("IPTK"); // lấy thẻ input
+                const button = document.getElementById("BTTK"); // lấy thẻ button
+                button.addEventListener("click",
+                    function (event) { // thêm sự kiện click cho thẻ button
+                        event.preventDefault(); // ngăn chặn hành động mặc định của button
+
+                        const inputVal = input.value; // lấy giá trị của thẻ input
+                        form.action = inputVal; // gán giá trị của thẻ input vào thuộc tính action của thẻ form
+                        form.submit(); // submit form
+                    }
+                );
+            </script>
+        </div>
+        <a href="Dangnhap.html">
+            <div id="DN">
+                <small>ĐĂNG NHẬP</small>
+            </div>
+        </a>
+    </header>
+    <!------------------------------------------------------------BODY-------------------------------------------------------------------->
+    <div id="main">
+        <div id="body">
+            <div id="thanhngang">
+                <div id="Phimdecu">Phim Đề Cử &#187;</div>
+                <div id="AllTC">
+                    <div class="Thanhcuon">
+                        <div class="mySlides fade">
+                            <a href="#">
+                                <div class="TCR" style="margin-left: 2px;">
+                                    <div class="BC" style="background-image: url('Images/TC1.jpg');">
+                                        <div class="Tap">4<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">One Piece Film: Red</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC2.jpg');">
+                                        <div class="Tap">12<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Chainsaw Man</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC3.jpg');">
+                                        <div class="Tap">258<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Đấu La Đại Lục</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC4.jpg');">
+                                        <div class="Tap">12<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Tensei shitara Ken Deshita</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC5.jpg');">
+                                        <div class="Tap">52<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Đấu Phá Thương Khung Phần 5</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC6.jpg');">
+                                        <div class="Tap">130<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Thôn Phệ Tinh Không</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC19.jpg');">
+                                        <div class="Tap">50<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Kamen Rider 555</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC22.jpg');">
+                                        <div class="Tap">107<br />Phút</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Your name</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mySlides fade">
+                            <a href="#">
+                                <div class="TCR">
+                                    <div class="BC" style="background-image: url('Images/TC7.jpg');">
+                                        <div class="Tap">20<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Kage no Jitsuryokusha ni Naritakute!</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC8.jpg');">
+                                        <div class="Tap">25<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Spy x Family</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC9.jpg');">
+                                        <div class="Tap">130<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Thế Giới Hoàn Mỹ</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC10.jpg');">
+                                        <div class="Tap">13<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Bleach: Sennen Kessen-hen</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC11.jpg');">
+                                        <div class="Tap">2<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Shingeki no Kyojin: The Final Season Part 13</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC12.jpg');">
+                                        <div class="Tap">12<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Kyokou Suiri Season 2</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC20.jpg');">
+                                        <div class="Tap">???<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Kamen Rider The Next</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="Suzume.html">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC23.jpg');">
+                                        <div class="Tap">122<br />Phút</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">SUZUME NO TOJIMARI</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="mySlides fade">
+                            <a href="#">
+                                <div class="TCR">
+                                    <div class="BC" style="background-image: url('Images/TC13.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Cơn mưa thịt viên 2</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC14.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Con thuyền cứu thế</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC15.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Turbo 2013</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC16.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Đặc vụ gà mờ</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC17.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Lạc vào thế giới kiến</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC18.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Kobayashi ga Kawai Sugite Tsurai OVA</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC21.jpg');">
+                                        <div class="Tap">1<br />Tập</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Kamen Rider × Kamen Rider Fourze & OOO: Movie War Mega Max
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="TC">
+                                    <div class="BC" style="background-image: url('Images/TC24.jpg');">
+                                        <div class="Tap">111<br />Phút</div>
+                                        <img class="Play" src="Images/play.png" alt="Play">
+                                        <div class="Ten">Đứa con của thời tiết</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                    <div style="text-align:center; background-color: rgba(0, 0, 0, 0.541) ; width: 1210px; height:20px; margin-left: 25px; border-radius: 0px 0px 3px 3px;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+                        function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) { slideIndex = 1 }
+                            if (n < 1) { slideIndex = slides.length }
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace("active", "");
+                            }
+                            slides[slideIndex - 1].style.display = "block";
+                            dots[slideIndex - 1].className += " active";
+                        }
+                    </script>
+                </div>
+            </div>
+            <p id="Thanhphim">
+            <div id="Thanh2">
+                <div id="Phim">Mới Cập Nhật &#187;</div>
+                <form>
+                    <input id="i1" type="submit" value="Anime" />
+                    <input id="i2" type="submit" value="CNA" />
+                </form>
+            </div>
+            <div id="GOP">
+                <div id="film" style="padding-top: 25px;">
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P2.jpg');">
+                                <div class="T">13 Tập</div>
+                                <div class="DG">4.0</div>
+                            </div>
+                            <div class="P">Tomo-chan wa Onnanoko!</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P4.jpg');">
+                                <div class="T">???</div>
+                                <div class="DG">3.0</div>
+                            </div>
+                            <div class="P">Tondemo Skill De Isekai Hourou Meshi</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P9.jpg');">
+                                <div class="T">???</div>
+                                <div class="DG">4.0</div>
+                            </div>
+                            <div class="P">Mononogatari</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P10.jpg');">
+                                <div class="T">???</div>
+                                <div class="DG">3.0</div>
+                            </div>
+                            <div class="P">Digimon Ghost Game</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P11.jpg');">
+                                <div class="T">13 Tập</div>
+                                <div class="DG">3.7</div>
+                            </div>
+                            <div class="P">Tokyo Revengers: Seiya Kessen-hen</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P12.jpg');">
+                                <div class="T">20 Tập</div>
+                                <div class="DG">3.9</div>
+                            </div>
+                            <div class="P">Fumetsu no Anata e 2nd Season</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P13.jpg');">
+                                <div class="T">12 Tập</div>
+                                <div class="DG">4.5</div>
+                            </div>
+                            <div class="P">One Piece</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P14.jpg');">
+                                <div class="T">30 Tập</div>
+                                <div class="DG">4.5</div>
+                            </div>
+                            <div class="P">Trigun Stampede</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P17.png');">
+                                <div class="T">5 Tập</div>
+                                <div class="DG">3.0</div>
+                            </div>
+                            <div class="P">Revenger</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P20.jpg');">
+                                <div class="T">12 tập</div>
+                                <div class="DG">2.8</div>
+                            </div>
+                            <div class="P">Itou Junji: Maniac</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P21.jpg');">
+                                <div class="T">16 Tập</div>
+                                <div class="DG">4.5</div>
+                            </div>
+                            <div class="P">Megaton-kyuu Musashi 2nd Season</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P22.jpg');">
+                                <div class="T">26 Tập</div>
+                                <div class="DG">5.0</div>
+                            </div>
+                            <div class="P">Tru Tiên</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P23.jpg');">
+                                <div class="T">??</div>
+                                <div class="DG">5.0</div>
+                            </div>
+                            <div class="P">Thám Tử Lừng Danh Conan</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P24.jpg');">
+                                <div class="T">??</div>
+                                <div class="DG">4.5</div>
+                            </div>
+                            <div class="P">Yowamushi Pedal: Limit Break</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P25.jpg');">
+                                <div class="T">136 Tập</div>
+                                <div class="DG">4.5</div>
+                            </div>
+                            <div class="P">Pocket Monsters 2019 </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P26.jpg');">
+                                <div class="T">12 Tập</div>
+                                <div class="DG">4.0</div>
+                            </div>
+                            <div class="P">Muv-Luv Alternative 2nd Season</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P27.jpg');">
+                                <div class="T">12 Tập</div>
+                                <div class="DG">4.0</div>
+                            </div>
+                            <div class="P">Meitantei Conan: Hannin no Hanzawa-san</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P28.jpg');">
+                                <div class="T">28 Tập</div>
+                                <div class="DG">3.5</div>
+                            </div>
+                            <div class="P">Utawarerumono: Futari no Hakuoro</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P29.jpg');">
+                                <div class="T">12 Tập</div>
+                                <div class="DG">4.8</div>
+                            </div>
+                            <div class="P">Bocchi the Rock!</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P30.jpeg');">
+                                <div class="T">13 Tập</div>
+                                <div class="DG">4.2</div>
+                            </div>
+                            <div class="P">Koukyuu no Karasu </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P33.jpg');">
+                                <div class="T">62 Phút</div>
+                                <div class="DG">4.2</div>
+                            </div>
+                            <div class="P">5 Centimet Trên Giây</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P34.jpg');">
+                                <div class="T">46 Phút</div>
+                                <div class="DG">4.2</div>
+                            </div>
+                            <div class="P">Khu Vườn Ngôn Từ</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P35.jpg');">
+                                <div class="T">7 Phút</div>
+                                <div class="DG">4.2</div>
+                            </div>
+                            <div class="P">Ánh Nhìn Của Ai Đó</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P36.jpg');">
+                                <div class="T">???</div>
+                                <div class="DG">4.2</div>
+                            </div>
+                            <div class="P">Hoshi no Koe</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="f">
+                            <div class="A" style="background-image: url('Images/P37.jpg');">
+                                <div class="T">1 Tập</div>
+                                <div class="DG">4.2</div>
+                            </div>
+                            <div class="P">Nàng Và Con Mèo Của Nàng</div>
+                        </div>
+                    </a>
+                </div>
+                <div id="PP">
+                    <div class="content">Fanpage CTOON.net</div>
+                    <div class="KP1">
+                        <div class="KP"></div>
+                    </div>
+                    <div id="AnhP" style="background-image: url('Images/BGPP.jpg');">
+                        <a href="#"><img id="LogoP" src="Images/AVATARPP.jpg" /></a>
+                        <div id="TenPP">
+                            <a href="#">
+                                <div id="TenPP1">Kênh Phim CTOON</div>
+                            </a>
+                            <div id="TenPP2">2,5k người theo dõi</div>
+                        </div>
+                        <a href="#">
+                            <div id="TTP">
+                                <img id="LogoTP" src="Images/facebooktp.png">
+                                <div id="TextTTP">Theo dõi trang</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="PR">Like hoặc chia sẻ Page để theo dõi những siêu phẩm anime mới nhất.</div>
+                </div>
+                <div id="PP1">
+                    <div class="content">ANIME MỚI</div>
+                    <div class="KP1">
+                        <div class="KP"></div>
+                    </div>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM" style="margin-top: 20px;">Suzume no Tojimari</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">Your Name</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">The Garden of Words</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">Weathering With You</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">5 Centimeters Per Second</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">Crossroad</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">She and Her Cat: Their Standing Points</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">Children Who Chase Lost Voices</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">The Place Promised in Our Early Days</div>
+                    </a>
+                    <a style="text-decoration: none;" href="#">
+                        <div class="TM">Voices of a Distant Star</div>
+                    </a>
+                </div>
+                <div id="PP2">
+                    <div class="content">XEM NHIỀU NHẤT</div>
+                    <div class="Locc" style="color:#FF4000;">Ngày</div>
+                    <a href="#">
+                        <div class="Locc">Tuần</div>
+                    </a>
+                    <a href="#">
+                        <div class="Locc">Tháng</div>
+                    </a>
+                    <a href="#">
+                        <div class="Locc">Năm</div>
+                    </a>
+                    <div class="KP1">
+                        <div class="KP"></div>
+                    </div>
+                    <div class="PXN" style="margin-top: 8px;">
+                        <a href="#">
+                            <div class="SP">
+                                <div class="ANHSP" style="background-image: url('Images/TC22.jpg');">
+                                    <div class="SLSP">
+                                        <img src="Images/bookmark.png" alt="">
+                                        <div>#1</div>
+                                    </div>
+                                    <div class="PLL">
+                                        <img src="Images/play.png">
+                                    </div>
+                                </div>
+                                <div class="TSP"><small>Your name</small></div>
+                            </div>
+                        </a>
+                        <img src="Images/star.png" class="Sao" alt="">
+                        <div class="NDPXN">8.6</div>
+                        <img src="Images/history-PXN.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">107 Phút</div>
+                        <img src="Images/calendar.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">2016</div>
+                        <div class="CG">
+                            <div class="LX">1,323 LƯỢT XEM</div>
+                        </div>
+                    </div>
+                    <div class="PXN">
+                        <a href="Suzume.html">
+                            <div class="SP">
+                                <div class="ANHSP" style="background-image: url('Images/TC23.jpg');">
+                                    <div class="SLSP">
+                                        <img src="Images/bookmark.png" alt="">
+                                        <div>#2</div>
+                                    </div>
+                                    <div class="PLL">
+                                        <img src="Images/play.png">
+                                    </div>
+                                </div>
+                                <div class="TSP"><small>SUZUME NO TOJIMARI</small></div>
+                            </div>
+                        </a>
+                        <img src="Images/star.png" class="Sao" alt="">
+                        <div class="NDPXN">7.6</div>
+                        <img src="Images/history-PXN.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">122 Phút</div>
+                        <img src="Images/calendar.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">2023</div>
+                        <div class="CG">
+                            <div class="LX">5,560 LƯỢT XEM</div>
+                        </div>
+                    </div>
+                    <div class="PXN">
+                        <a href="#">
+                            <div class="SP">
+                                <div class="ANHSP" style="background-image: url('Images/TC24.jpg');">
+                                    <div class="SLSP">
+                                        <img src="Images/bookmark.png" alt="">
+                                        <div>#3</div>
+                                    </div>
+                                    <div class="PLL">
+                                        <img src="Images/play.png">
+                                    </div>
+                                </div>
+                                <div class="TSP"><small>Đứa con của thời tiết</small></div>
+                            </div>
+                        </a>
+                        <img src="Images/star.png" class="Sao" alt="">
+                        <div class="NDPXN">8.2</div>
+                        <img src="Images/history-PXN.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">111 Phút</div>
+                        <img src="Images/calendar.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">2019</div>
+                        <div class="CG">
+                            <div class="LX">2,431 LƯỢT XEM</div>
+                        </div>
+                    </div>
+                    <div class="PXN">
+                        <a href="#">
+                            <div class="SP">
+                                <div class="ANHSP" style="background-image: url('Images/TC8.jpg');">
+                                    <div class="SLSP">
+                                        <img src="Images/bookmark.png" alt="">
+                                        <div>#4</div>
+                                    </div>
+                                    <div class="PLL">
+                                        <img src="Images/play.png">
+                                    </div>
+                                </div>
+                                <div class="TSP"><small>SPY FAMILY</small></div>
+                            </div>
+                        </a>
+                        <img src="Images/star.png" class="Sao" alt="">
+                        <div class="NDPXN">7.3</div>
+                        <img src="Images/history-PXN.png" style="margin-left: 10px;" class="Sao" alt="">
+                        <div class="NDPXN">12 Tập</div>
+                        <img src="Images/calendar.png" style="margin-left: 18px;" class="Sao" alt="">
+                        <div class="NDPXN">2022</div>
+                        <div class="CG">
+                            <div class="LX">3,673 LƯỢT XEM</div>
+                        </div>
+                    </div>
+                    <div id="KeVang">
+                        <img src="Images/iconrun.png" />
+                        <div id="TKV">CTOON.net</div>
+                    </div>
+                </div>
+            </div>
+            </p>
+            <div id="TT">
+                <a href="#">
+                    <div class="NONE">&#171; Đầu</div>
+                </a>
+                <div id="YEP">1</div>
+                <a href="#">
+                    <div class="NONE">2</div>
+                </a>
+                <a href="#">
+                    <div class="NONE">...</div>
+                </a>
+                <a href="#">
+                    <div class="NONE">Cuối &#187;</div>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div id="END1">
+                <img src="Images/LOGO.png" />
+            </div>
+            <div id="END2">
+                <div id="END2-1">CTOON</div>
+                <div>&#169; 2023 All Rights Reserved •</div>
+            </div>
+            <div id="END3">
+                <img src="Images/facebook.png">
+            </div>
+            <div id="END4">
+                <img src="Images/like.png">
+                <div id="END4-N">2.5k</div>
+                <a href="https://www.facebook.com/lgdlgllggift.me?mibextid=ZbWKwL" style="text-decoration: none;">
+                    <div id="END4-N1">FANPAGE FACEBOOK</div>
+                </a>
+            </div>
+            <div id="END5">
+                <img src="Images/call.png">
+                <a href="mailto:luugiadai2004@gmail.com">
+                    <div id="END5-N">Liên hệ quảng cáo:<br />luugiadai2004@gmail.com</div>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <!----------------------------------------------------------END----------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------------------>
+    <p id="KT">CTOON.net không chịu trách nhiệm đối với bất kỳ nội dung nào được đăng tải trong trang web này.
+Mọi nội dung đều được sưu tầm và nhúng vào website tương tự như công cụ tìm kiếm Google.
+Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.<br />
+Liên hệ: 2224802010426@student.tdmu.edu.vn<br />
+Copyright ® 2023 -2053 CTOON.net. All Rights Reserved •</p>
+</body>
+</html>

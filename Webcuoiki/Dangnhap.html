@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Dangnhap.css" />
+    <link rel="shortcut icon" href="Images/Icon.png" type="image/png" />
+    <title>CTOON_Join</title>
+    <script>
+        function kiemtra(){
+            var hoten=window.document.Login.hoten.value;
+            var mk=window.document.Login.mk.value;
+            if(hoten.length==0){
+                alert('Bạn chưa nhập họ tên!!!');
+                window.document.Login.hoten.focus(); return false;
+            }
+            if(mk.length==0){
+                alert('Bạn chưa nhập mật khẩu!!!');
+                window.document.Login.mk.focus();
+                return false;
+            }
+            if(mk.length<8){
+                alert('Sai mật khẩu');
+                window.document.Login.mk.focus();
+                return false;
+            }
+            alert('Registered successfully!!!');
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="form">
+        <form name="Login" class="login-form" action="Trangchu.html" onsubmit="return kiemtra();">
+            <input type="text" name="hoten" placeholder="Username" />
+            <input type="password" name="mk" placeholder="Pasword" />
+            <button type="submit" name="sb">Login</button>
+            <p class="message">
+                Not registered?
+                <a href="Dangky.html">Create an account</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
